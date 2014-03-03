@@ -5,17 +5,17 @@ cabal-version:    >= 1.2
 
 library
   hs-source-dirs: src
-  build-depends:  base == 4.5.*, HUnit, MissingH == 1.2.0.0, derp == 0.1.1, containers
+  build-depends:  base == 4.6.*, HUnit, MissingH == 1.2.0.0, derp == 0.1.1, containers
 
 -- The compiler binary
 executable        pyli
   main-is:        Pyli.hs
-  hs-source-dirs: src
+  hs-source-dirs: src src/lib
   ghc-options:    -Wall
 
 -- The lexer binary
 executable        pyle
   main-is:        Pyle.hs
-  hs-source-dirs: src
+  hs-source-dirs: src src/lib
   ghc-options:    -Wall
 
