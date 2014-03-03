@@ -9,13 +9,13 @@ library
 
 -- The compiler binary
 executable        pow-parse
-  main-is:        Pyli.hs
+  main-is:        PowParse.hs
   hs-source-dirs: src src/lib
   ghc-options:    -Wall
 
 -- The lexer binary
 executable        pow-lex
-  main-is:        Pyle.hs
+  main-is:        PowLex.hs
   hs-source-dirs: src src/lib
   ghc-options:    -Wall
 
