@@ -1,8 +1,8 @@
-lex: compile
-	@./dist/build/pow-lex/pow-lex
+lexer: compile
+	@./dist/build/pow-lexer/pow-lexer
 
-parse: ast_to_lisp compile
-	@./dist/build/pow-parse/pow-parse | ./ast_to_lisp
+parser: ast_to_lisp compile
+	@./dist/build/pow-parser/pow-parser | ./ast_to_lisp
 
 compile:
 	@cabal configure > /dev/null
