@@ -8,13 +8,13 @@ library
   build-depends:  base == 4.6.*, HUnit, MissingH == 1.2.0.0, derp == 0.1.1, containers
 
 -- The compiler binary
-executable        pow-parse
+executable        pow-parser
   main-is:        PowParse.hs
   hs-source-dirs: src src/lib
   ghc-options:    -Wall
 
 -- The lexer binary
-executable        pow-lex
+executable        pow-lexer
   main-is:        PowLex.hs
   hs-source-dirs: src src/lib
   ghc-options:    -Wall
