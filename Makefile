@@ -2,7 +2,7 @@ lexer: compile
 	@./dist/build/pow-lexer/pow-lexer
 
 parser: ast_to_lisp compile
-	@./dist/build/pow-parser/pow-parser | ./ast_to_lisp
+	@./dist/build/pow-parser/pow-parser | ./src/tools/ast_to_lisp
 
 compile:
 	@cabal configure > /dev/null
@@ -10,8 +10,8 @@ compile:
 
 clean:
 	cabal clean
-	rm -f sdiff
+	rm -f ./src/tools/sdiff
 
 ast_to_lisp:
-	@raco exe ast_to_lisp.rkt
+	@raco exe ./src/tools/ast_to_lisp.rkt
 
