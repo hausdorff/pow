@@ -1,11 +1,8 @@
-pyle: compile
-	@./dist/build/pyle/pyle
+lex: compile
+	@./dist/build/pow-lex/pow-lex
 
-pyli: ast_to_lisp compile
-	@./dist/build/pyli/pyli | ./ast_to_lisp
-
-parse: compile
-	@./dist/build/pyli/pyli
+parse: ast_to_lisp compile
+	@./dist/build/pow-parse/pow-parse | ./ast_to_lisp
 
 compile:
 	@cabal configure > /dev/null
